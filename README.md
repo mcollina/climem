@@ -2,7 +2,7 @@
 
 Monitor the memory consumption of your node process via CLI
 
-![https://raw.githubusercontent.com/mcollina/climem/master/demo.gif]
+![demo](https://raw.githubusercontent.com/mcollina/climem/master/demo.gif)
 
 ## Install
 
