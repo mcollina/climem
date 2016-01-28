@@ -143,7 +143,12 @@ function cli () {
     } else {
       console.error('stream closed')
     }
-    fs.unlinkSync(argv._[0])
+
+    try {
+      fs.unlinkSync(argv._[0])
+    } catch (err) {
+      // nothing to do it might not be a file
+    }
   })
 
   function write (chunk, enc, cb) {
