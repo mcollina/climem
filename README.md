@@ -22,7 +22,7 @@ You can also set `CLIMEM` env variable to set a specific location or a
 TCP port:
 
 ```
-CLIMEM=8999 node -r climeme yourapp.js &
+CLIMEM=8999 node -r climem yourapp.js &
 climem 8999 localhost
 ```
 
