@@ -1,6 +1,6 @@
 {
   "name": "climem",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Track memory consumption in your terminal",
   "main": "climem.js",
   "bin": {
