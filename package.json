@@ -1,6 +1,6 @@
 {
   "name": "climem",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Track memory consumption in your terminal",
   "main": "climem.js",
   "bin": {
@@ -11,6 +11,14 @@
   },
   "author": "Matteo Collina <hello@matteocollina.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcollina/climem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mcollina/climem/issues"
+  },
+  "homepage": "https://github.com/mcollina/climem#readme",
   "devDependencies": {
     "pre-commit": "^1.1.2",
     "standard": "^5.4.1"
