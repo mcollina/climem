@@ -12,6 +12,7 @@ const pump = require('pump')
 const writer = require('flush-write-stream')
 const blessed = require('blessed')
 const contrib = require('blessed-contrib')
+const { parentPort } = require('worker_threads')
 
 function Monitor () {
   Readable.call(this)
