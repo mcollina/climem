@@ -169,8 +169,16 @@ function cli () {
   }
 }
 
-if (require.main === module) {
-  cli()
-} else {
-  monitor()
+function startClimem () {
+  if (parentPort) {
+    return
+  }
+
+  if (require.main === module) {
+    cli()
+  } else {
+    monitor()
+  }
 }
+
+startClimem()
