@@ -1,4 +1,4 @@
 'use strict'
 
-var array = []
-setInterval(() => array.push(new Buffer(1024 * 1024).toString()), 100)
+const array = []
+setInterval(() => array.push(Buffer.allocUnsafe(1024 * 1024).toString()), 100)

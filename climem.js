@@ -17,7 +17,7 @@ const { parentPort } = require('worker_threads')
 function Monitor () {
   Readable.call(this)
 
-  var that = this
+  const that = this
   this._timer = setInterval(() => {
     that.push(JSON.stringify(process.memoryUsage()))
     that.push('\n')
@@ -66,7 +66,7 @@ function monitor () {
 }
 
 function empty (num) {
-  let result = new Array(num)
+  const result = new Array(num)
 
   for (let i = 0; i < num; i++) {
     result[i] = ' '
@@ -137,20 +137,20 @@ function cli () {
   }
 
   pump(net.connect(argv._[0], argv._[1]),
-       split(JSON.parse),
-       writer.obj(argv.data ? write : plot), (err) => {
-    if (err) {
-      console.error(err.message)
-    } else {
-      console.error('stream closed')
-    }
+    split(JSON.parse),
+    writer.obj(argv.data ? write : plot), (err) => {
+      if (err) {
+        console.error(err.message)
+      } else {
+        console.error('stream closed')
+      }
 
-    try {
-      fs.unlinkSync(argv._[0])
-    } catch (err) {
+      try {
+        fs.unlinkSync(argv._[0])
+      } catch (err) {
       // nothing to do it might not be a file
-    }
-  })
+      }
+    })
 
   function write (chunk, enc, cb) {
     console.dir(chunk)
